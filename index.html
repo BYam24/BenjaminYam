@@ -1,0 +1,262 @@
+<!-- you can do ! [tab] to get the doc heading
+  the blue words are tags
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benjamin's Portfolio</title>
+  <!-- add link to the styling-->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a931798879.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- you can quickly add id by doing #header then tab
+    you use # in css to indicate an id-->
+  <div id="header">
+    <!-- you can quickly add class by doing .container then tab
+      you use . in css to indicate a class
+    
+      You can also tab any tag names
+    
+    In HTML, class and id attributes are used to apply styles and manipulate elements with CSS and JavaScript. However, they have different purposes and usage rules.
+    
+      class Attribute
+    1. Usage: The class attribute is used to assign one or more class names to an HTML element.
+    2. Multiple Elements: Multiple elements can share the same class name.
+    3. CSS Selector: In CSS, a class is selected using a dot (.) followed by the class name.
+    4. JavaScript: In JavaScript, elements with a specific class can be selected using methods like getElementsByClassName or querySelectorAll.
+
+      id Attribute
+    1. Usage: The id attribute is used to assign a unique identifier to an HTML element.
+    2. Uniqueness: Each id must be unique within the document. No two elements should have the same id.
+    3. CSS Selector: In CSS, an id is selected using a hash (#) followed by the id value.
+    4. JavaScript: In JavaScript, an element with a specific id can be selected using methods like getElementById.
+
+
+    Key Differences
+    Uniqueness: id must be unique across the document, while class can be shared by multiple elements.
+    Selector: id uses # in CSS selectors, whereas class uses ..
+    Use Cases: Use id for single, unique elements that need to be distinctly targeted. Use class for groups of elements that share the same styles or behaviors.
+    -->
+
+      <div class="container">
+        <nav>
+          <img src="images/logo.jpg" class="logo">
+          <ul id="sidemenu"> <!-- unordered list -->
+            <li><a href="#header">Home</a> <!-- a tag makes the link clickable--></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-square-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="header-text">
+          <p>SWE/AI & ML Researcher</p>
+          <h1>Hi, I am <span> Benjamin </span> <br>from United States. <br> I am a Master student <br> at Cornell University.</h1>
+        </div>
+      </div>
+  </div> 
+
+<!------------------about ------------------------>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/Yam_Benjamin_Headshot.jpg" alt="My Headshot" class="about-me-photo">
+        </div> 
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I am interning at EMO America as a web developer. I am interested in AI, Robotics and Machine Learning. 
+            I have worked on autonomous vehicles, food recommendation application, and AI games. </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+              <p class="tab-links" onclick="opentab('experience')"> Experience</p>              
+              <p class="tab-links" onclick="opentab('education')"> Education</p>
+            </div>
+
+          <!-- onclick opentab opens the id -->
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+              <li><span>Web Development</span><br>Web app Development</li>
+              <li><span>Deep Learning</span><br>Building Deep Network</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2024-Current</span><br>Web Developer and Video Editor at EMO America</li>
+              <li><span>2022-Current</span><br>Resident Advisor at Cornell University</li>
+              <li><span>2022-2023</span><br>Multivariable Calculus Teacher</li>
+              <li><span>2021-2023</span><br>Cup Robotics CS team</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2024</span><br>CS Master of Engineering @ Cornell University </li>
+              <li><span>2021-2024</span><br>CS Bachelor of Science with honors @ Cornell University</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!----------------services-------------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>I can build website ranging from personal to ecommerce website</p>
+          <a href="#"> Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop-simple"></i>
+          <h2>UI/UX</h2>
+          <p>I can design interfaces</p>
+          <a href="#"> Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-video"></i>
+          <h2>Video Editing</h2>
+          <p>I can edit videos and create thumbnails</p>
+          <a href="#"> Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-------portfolio---------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/autonomous-driving.png" alt="self driving project">
+        <div class="layer">
+          <h3>Automous Driving Simulation with Actor-Critic</h3>
+          <p>I trianed a car to self-drive in a mountain using Actor-Critic PPO and DPO.</p>
+          <a href="https://www.youtube.com/watch?v=Vqr1kqAXpF0&ab_channel=BenjaminYam"><i class="fa-solid fa-car"></i></a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="images/Blackjack_AI.png" alt="AI play BJ">
+        <div class="layer">
+          <h3>AI Learning Blackjack</h3>
+          <p>I designed AI Blackjack Player to learn to play Blackjack and defeat human players.</p>
+          <a href="https://drive.google.com/file/d/1bJy7XFot6tP0X8HpkJJyKltTrC5EWWRS/view?usp=sharing"><i class="fa-solid fa-chess-rook"></i></a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="images/snack_surfer.png" alt="Snack recommendation">
+        <div class="layer">
+          <h3>Snack Recommendation App</h3>
+          <p>App uses singular value decompostion or principal component analysis and cosine similarity to filter and find snacks to user liking.</p>
+          <a href="http://4300showcase.infosci.cornell.edu:5186/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See More</a>
+  </div>
+</div>
+ 
+<!---------contact-------------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> BenjaminYamWork@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 646-591-2574</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/benjamin.yam.79"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/b.enjaminyam/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/benjaminyam1/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="resume_Yam_Benjamin.pdf" download class="btn btn2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg">  </span>
+
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Benjamin. <i class="fa-solid fa-heart"></i></p>
+  </div>
+</div>
+
+<!-- script tag let us add js -->
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){ //Defining funciton for opening tab that takes in the argument tabname which is the id of the tab we clicked
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link"); //removes class name "active-link"
+    }
+    for (tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab"); //removes active-tab from the class so that the class is only tab-contents which has display of none instead of block
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+
+  }
+
+</script>
+
+<script>
+  var sidemenu = document.getElementById("sidemenu")
+   
+  function openmenu(){
+    sidemenu.style.right = "0";
+  }
+
+  function closemenu(){
+    sidemenu.style.right = "-200px";
+  }
+
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxDviHoJEyK5XUzfoq67MRnkd3TCo4pB7FReU6KsGjWRdE7KNxnoOfKHvBkCKeysrqQcg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+      msg.innerHTML = "Message sent successfully"
+      setTimeout(function(){
+        msg.innerHTML = ""
+      },5000)
+      form.reset()
+      console.error('Success!', response)
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
