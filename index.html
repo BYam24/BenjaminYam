@@ -72,6 +72,7 @@
 
         <div class="header-text">
           <p>SWE/AI & ML Researcher</p>
+          <p><span class='auto-input'></span></p>
           <h1>Hi, I am <span> Benjamin </span> <br>from United States. <br> I am a Master student <br> at Cornell University.</h1>
         </div>
       </div>
@@ -292,6 +293,16 @@
       console.error('Success!', response)
     })
       .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed(".auto-input", {
+    strings:["Innovative", "Cooperative", "Inclusive"],
+    typeSpeed: 100,
+    backSpeed: 100, 
+    loop: true
   })
 </script>
 
