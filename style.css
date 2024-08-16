@@ -44,10 +44,17 @@ nav ul li{ /* for list item */
   display: inline-block; /* horizontal inline */
   list-style: none;
   margin: 10px 20px; /* 10px top and bottom / 20 px left and right */
+  border: 2px solid #e80d0d;
+    /* Add border to each list item */
+
+  padding: 10px;
+  /* Add some padding inside the list items */
+  border-radius: 5px;
+  /* Optional: make corners rounded */
 }
 
 nav ul li a{ /* for item */
-  color: #fff;
+  color: #ff004f;
   text-decoration: none;
   font-size: 18px;
   position: relative; 
@@ -70,11 +77,16 @@ width: 100%;
 .header-text{
   margin-top: 20%;
   font-size: 30px;
+  /* background: rgba(0, 0, 0, 0.1); */
+  /* Slight black overlay to blur */
 }
 
 .header-text h1{
   font-size: 60px;
   margin-top: 20px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+    /* Add text shadow */
+
 }
 
 .header-text h1 span{ /*note header-text is a class, h1 and span are tags */
